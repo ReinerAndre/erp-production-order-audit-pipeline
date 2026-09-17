@@ -1,11 +1,13 @@
 # Auditoria de Ordens de Produção & Integridade Contábil (WIP vs. PA)
 
 📌 O Desafio de Negócio
+
 Em plantas industriais com roteiros complexos de manufatura, ordens de produção frequentemente sofrem desvios de processo para retrabalho técnico. Uma inconsistência sistêmica comum no ERP ocorre quando a última operação fabril (Etapa 60 - Embalagem/Finalização) é encerrada ou interrompida, mas etapas intermediárias de retrabalho permanecem com status aberto.
 
 Essa divergência gera um risco contábil e financeiro crítico: a ordem permanece com o status global de "Em Produção", mantendo saldo alocado em Estoque em Processo (**WIP - Work in Process**), ao mesmo tempo em que a etapa final já deu entrada física no Estoque de Produto Acabado (**PA**). O resultado direto é a duplicidade de inventário no fechamento mensal, distorção de balanço patrimonial e geração de retrabalho investigativo para a controladoria contábil.
 
 🎯 O Objetivo
+
 * Identificar em tempo real ordens de produção ativas com conflito de encerramento entre a etapa final e operações anteriores.
 * Eliminar a distorção contábil de duplicidade de estoque (WIP e PA) antes da rotina de fechamento mensal.
 * Monitorar o *aging* (tempo de parada) de ordens interrompidas com menos de 90% de volume concluído.
